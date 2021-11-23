@@ -12,122 +12,136 @@
 
 <body>
 
-
-  <header>
-    <h2>Esti.mate</h2>
-  </header>
-
-  <main>
-
-    <div class="estimate-calculator">
-      <form>
-        <fieldset>
-          <legend>Work Size</legend>
-          <div>
-            <label for="word-count">Word Count:</label>
-            <input type="number" class="number-input" name="word-count" id="word-count" value="1000" step="100" min="0">
-            <span>words</span>
+  
+  <div class="container">
+    <header>
+      <h2>Esti.mate</h2>
+    </header>
+    <main>
+      <div class="estimate-calculator">
+        <form>
+          <fieldset class="work-size">
+            <legend>Work Size</legend>
+            <div>
+              <label for="word-count">Word Count:</label>
+              <input type="number" class="number-input" name="word-count" id="word-count" value="1000" step="100" min="0">
+              <span>words</span>
+            </div>
+            <div>
+              <label for="recording-length">Recording:</label>
+              <input type="number" class="number-input" name="recording-length" id="recording-length" value="20" step="10"
+                min="0">
+              <span>minutes</span>
+            </div>
+            <div>
+              <label for="meeting-length">Meeting:</label>
+              <input type="number" class="number-input" name="meeting-length" id="meeting-length" value="1" step="0.25"
+                min="0">
+              <span>hours</span>
+            </div>
+          </fieldset>
+          <fieldset class="tasks">
+            <legend>Tasks</legend>
+            <div>
+              <input type="checkbox" id="extraction" name="extraction">
+              <label for="extraction">Extraction:</label>
+              <div class="extraction-box">
+                <input type="number" class="number-input" name="extraction-rate" id="extraction-rate" value="0.01"
+                  step="0.001" min="0">
+                <label for="extraction-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="cleanup" name="cleanup">
+              <label for="cleanup">Cleanup:</label>
+              <div class="cleanup-box">
+                <input type="number" class="number-input" name="cleanup-rate" id="cleanup-rate" value="0.01" step="0.001"
+                  min="0">
+                <label for="cleanup-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="translation" name="translation">
+              <label for="translation">Translation:</label>
+              <div class="translation-box">
+                <input type="number" class="number-input" name="translation-rate" id="translation-rate" value="0.055"
+                  step="0.001" min="0">
+                <label for="translation-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="editing" name="editing">
+              <label for="editing">Editing:</label>
+              <div class="editing-box">
+                <input type="number" class="number-input" name="editing-rate" id="editing-rate" value="0.03" step="0.001"
+                  min="0">
+                <label for="editing-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="proofreading" name="proofreading">
+              <label for="proofreading">Proofreading:</label>
+              <div class="proofreading-box">
+                <input type="number" class="number-input" name="proofreading-rate" id="proofreading-rate" value="0.03"
+                  step="0.001" min="0">
+                <label for="proofreading-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="transcription" name="transcription">
+              <label for="transcription">Transcription:</label>
+              <div class="transcription-box">
+                <input type="number" class="number-input" name="transcription-rate" id="transcription-rate" value="0.1"
+                  step="0.01" min="0">
+                <label for="transcription-rate">USD per minute</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="content-creation" name="content-creation">
+              <label for="content-creation">Content creation:</label>
+              <div class="content-creation-box">
+                <input type="number" class="number-input" name="content-creation-rate" id="content-creation-rate"
+                  value="0.055" step="0.001" min="0">
+                <label for="content-creation-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="voiceover" name="voiceover">
+              <label for="voiceover">Voiceover:</label>
+              <div class="voiceover-box">
+                <input type="number" class="number-input" name="voiceover-rate" id="voiceover-rate" value="0.1"
+                  step="0.01" min="0">
+                <label for="voiceover-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="meeting" name="meeting">
+              <label for="meeting">Meeting:</label>
+              <div class="meeting-box">
+                <input type="number" class="number-input" name="meeting-rate" id="meeting-rate" value="30" step="10"
+                  min="0">
+                <label for="meeting-rate">USD per hour</label>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="estimate-results">
+        <fieldset class="totals">
+          <legend>Totals</legend>
+          <div id="totals">
+            <ul></ul>
           </div>
+          <br>
           <div>
-            <label for="recording-length">Recording:</label>
-            <input type="number" class="number-input" name="recording-length" id="recording-length" value="20" step="10"
-              min="0">
-            <span>minutes</span>
-          </div>
-          <div>
-            <label for="meeting-length">Meeting:</label>
-            <input type="number" class="number-input" name="meeting-length" id="meeting-length" value="1" step="0.25"
-              min="0">
-            <span>hours</span>
+            <label for="profit-margin"><em>profit margin:</em></label>
+            <input type="number" class="number-input" name="profit-margin" id="profit-margin" value="30" step="1" min="0">
+            <span>%</span>
           </div>
         </fieldset>
-        <fieldset>
-          <legend>Tasks</legend>
-          <div>
-            <input type="checkbox" id="extraction" name="extraction">
-            <label for="extraction">Extraction:</label>
-            <input type="number" class="number-input" name="extraction-rate" id="extraction-rate" value="0.01"
-              step="0.001" min="0">
-            <label for="extraction-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="transcription" name="transcription">
-            <label for="transcription">Transcription:</label>
-            <label for="transcription-rate"></label>
-            <input type="number" class="number-input" name="transcription-rate" id="transcription-rate" value="0.1"
-              step="0.01" min="0">
-            <span>USD per minute</span>
-          </div>
-          <div>
-            <input type="checkbox" id="cleanup" name="cleanup">
-            <label for="cleanup">Cleanup:</label>
-            <label for="cleanup-rate"></label>
-            <input type="number" class="number-input" name="cleanup-rate" id="cleanup-rate" value="0.01" step="0.001"
-              min="0">
-            <span>USD per word</span>
-          </div>
-          <div>
-            <input type="checkbox" id="translation" name="translation">
-            <label for="translation">Translation:</label>
-            <input type="number" class="number-input" name="translation-rate" id="translation-rate" value="0.055"
-            step="0.001" min="0">
-            <label for="translation-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="editing" name="editing">
-            <label for="editing">Editing:</label>
-            <input type="number" class="number-input" name="editing-rate" id="editing-rate" value="0.03" step="0.001"
-            min="0">
-            <label for="editing-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="proofreading" name="proofreading">
-            <label for="proofreading">Proofreading:</label>
-            <input type="number" class="number-input" name="proofreading-rate" id="proofreading-rate" value="0.03"
-            step="0.001" min="0">
-            <label for="proofreading-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="content-creation" name="content-creation">
-            <label for="content-creation">Content creation:</label>
-            <input type="number" class="number-input" name="content-creation-rate" id="content-creation-rate"
-            value="0.055" step="0.001" min="0">
-            <label for="content-creation-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="voiceover" name="voiceover">
-            <label for="voiceover">Voiceover:</label>
-            <input type="number" class="number-input" name="voiceover-rate" id="voiceover-rate" value="0.1" step="0.01"
-            min="0">
-            <label for="voiceover-rate">USD per word</label>
-          </div>
-          <div>
-            <input type="checkbox" id="meeting" name="meeting">
-            <label for="meeting">Meeting:</label>
-            <input type="number" class="number-input" name="meeting-rate" id="meeting-rate" value="30" step="10"
-            min="0">
-            <label for="meeting-rate">USD per hour</label>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-
-    <div class="estimate-results">
-      <fieldset>
-        <legend>Totals</legend>
-        <div id="totals">
-          <ul></ul>
-        </div>
-        <br>
-        <div>
-          <label for="profit-margin"><em>profit margin:</em></label>
-          <input type="number" class="number-input" name="profit-margin" id="profit-margin" value="30" step="1" min="0">
-          <span>%</span>
-        </div>
-      </fieldset>
-    </div>
-
-  </main>
+      </div>
+    </main>
+  </div>
 
 </body>
 

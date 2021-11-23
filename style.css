@@ -9,9 +9,11 @@ body {
 
 header {
   background-color: #000;
-  margin: 30px 0;
+  margin: 70px auto 30px;
   color: #fff;
-  padding: 0px 22px;
+  width: fit-content;
+  padding: 1px 23px;
+  box-shadow: black -1px 1px, white -2px 2px, white -3px 3px, white -4px 4px, black -5px 5px, black -6px 6px, black -7px 7px, black -8px 8px;
 }
 
 main {
@@ -28,7 +30,7 @@ legend {
 
 .number-input {
   max-width: 55px;
-  margin-left: 10px;
+  margin: 4px 0;
 }
 
 fieldset {
@@ -42,4 +44,13 @@ li {
 
 p {
   margin: 0.2em 0;
+}
+
+.work-size,
+.tasks,
+.totals {
+  color: #403e10;
+  font-weight: bold;
+  box-shadow: black -1px 1px, black -2px 2px, black -3px 3px, black -4px 4px, black -5px 5px, black -6px 6px,
+    black -7px 7px, black -8px 8px;
 }
