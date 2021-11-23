@@ -34,6 +34,18 @@
               <span>minutes</span>
             </div>
             <div>
+              <label for="design-length">Design:</label>
+              <input type="number" class="number-input" name="design-length" id="design-length" value="5" step="1"
+                min="0">
+              <span>hours</span>
+            </div>
+            <div>
+              <label for="development-length">Development:</label>
+              <input type="number" class="number-input" name="development-length" id="development-length" value="5" step="1"
+                min="0">
+              <span>hours</span>
+            </div>
+            <div>
               <label for="meeting-length">Meeting:</label>
               <input type="number" class="number-input" name="meeting-length" id="meeting-length" value="1" step="0.25"
                 min="0">
@@ -103,6 +115,24 @@
                 <input type="number" class="number-input" name="content-creation-rate" id="content-creation-rate"
                   value="0.055" step="0.001" min="0">
                 <label for="content-creation-rate">USD per word</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="design" name="design">
+              <label for="design">Design:</label>
+              <div class="design-box">
+                <input type="number" class="number-input" name="design-rate" id="design-rate"
+                  value="20" step="1" min="0">
+                <label for="design-rate">USD per hour</label>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="development" name="development">
+              <label for="development">Development:</label>
+              <div class="development-box">
+                <input type="number" class="number-input" name="development-rate" id="development-rate"
+                  value="20" step="1" min="0">
+                <label for="development-rate">USD per hour</label>
               </div>
             </div>
             <div>

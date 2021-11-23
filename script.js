@@ -1,5 +1,7 @@
 const wordCount = document.getElementById("word-count");
 const recordingLength = document.getElementById("recording-length");
+const designLength = document.getElementById("design-length");
+const developmentLength = document.getElementById("development-length");
 const meetingLength = document.getElementById("meeting-length");
 
 const extraction = document.getElementById("extraction");
@@ -30,6 +32,14 @@ const contentCreation = document.getElementById("content-creation");
 const contentCreationRate = document.getElementById("content-creation-rate");
 const contentCreationBox = document.querySelector(".content-creation-box");
 
+const design = document.getElementById("design");
+const designRate = document.getElementById("design-rate");
+const designBox = document.querySelector(".design-box");
+
+const development = document.getElementById("development");
+const developmentRate = document.getElementById("development-rate");
+const developmentBox = document.querySelector(".development-box");
+
 const voiceover = document.getElementById("voiceover");
 const voiceoverRate = document.getElementById("voiceover-rate");
 const voiceoverBox = document.querySelector(".voiceover-box");
@@ -49,7 +59,7 @@ function roundToX(num, X) {
   return +(Math.round(num + "e+"+X)  + "e-"+X);
 }
 
-function updateTotals() {
+function updateTotals(e) {
   totals.innerHTML = ""
   let sum = 0
   if (extraction.checked) {
@@ -114,6 +124,24 @@ function updateTotals() {
     sum += contentCreationFee
   } else {
     contentCreationBox.style.display = "none"
+  }
+  if (design.checked) {
+    designBox.style.display = "block"
+    let designFee = designRate.value * designLength.value
+    designFee = roundToX(designFee, 2)
+    totals.insertAdjacentHTML("beforeend", `<li>Design: ${designFee} USD</li>`)
+    sum += designFee
+  } else {
+    designBox.style.display = "none"
+  }
+  if (development.checked) {
+    developmentBox.style.display = "block"
+    let developmentFee = developmentRate.value * developmentLength.value
+    developmentFee = roundToX(developmentFee, 2)
+    totals.insertAdjacentHTML("beforeend", `<li>Development: ${developmentFee} USD</li>`)
+    sum += developmentFee
+  } else {
+    developmentBox.style.display = "none"
   }
   if (voiceover.checked) {
     voiceoverBox.style.display = "block"
