@@ -101,7 +101,7 @@ function updateTotals() {
   let profit = sum * profitMargin.value / 100
   totals.insertAdjacentHTML("beforeend", `<p><strong>Cost: ${sum} USD</strong></p>`)
   totals.insertAdjacentHTML("beforeend", `<p><strong>Estimate: ${roundToX(estimate, 2)} USD</strong></p>`)
-  totals.insertAdjacentHTML("beforeend", `<p><strong>Profit: ${roundToX(profit, 2)} USD</strong></p>`)
+  totals.insertAdjacentHTML("beforeend", `<p><em>Profit: ${roundToX(profit, 2)} USD</em></p>`)
 }
 
 
