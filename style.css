@@ -38,9 +38,10 @@ fieldset {
   margin: 20px;
 }
 
-li {
-  list-style-position: inside;
-  margin-bottom: 0.4em;
+ul {
+  margin: 0 0 0 -1em;
+  list-style-type: circle;
+  font-weight: lighter;
 }
 
 p {
@@ -48,10 +49,11 @@ p {
 }
 
 .work-size,
-.tasks,
-.totals {
+.costs,
+.totals,
+.calculations {
   color: #403e10;
   font-weight: bold;
   box-shadow: #16161d -1px 1px, #16161d -2px 2px, #16161d -3px 3px, #16161d -4px 4px, #16161d -5px 5px, #16161d -6px 6px,
-    #16161d -7px 7px, #16161d -8px 8px;
+    #16161d -7px 7px;
 }

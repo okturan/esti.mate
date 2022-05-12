@@ -52,15 +52,15 @@
               <span>hours</span>
             </div>
           </fieldset>
-          <fieldset class="tasks">
-            <legend>Tasks</legend>
+          <fieldset class="costs">
+            <legend>Costs</legend>
             <div>
               <input type="checkbox" id="extraction" name="extraction">
               <label for="extraction">Extraction:</label>
               <div class="extraction-box">
                 <input type="number" class="number-input" name="extraction-rate" id="extraction-rate" value="0.01"
                   step="0.001" min="0">
-                <label for="extraction-rate">USD per word</label>
+                <label for="extraction-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -69,7 +69,7 @@
               <div class="cleanup-box">
                 <input type="number" class="number-input" name="cleanup-rate" id="cleanup-rate" value="0.01" step="0.001"
                   min="0">
-                <label for="cleanup-rate">USD per word</label>
+                <label for="cleanup-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -78,7 +78,7 @@
               <div class="translation-box">
                 <input type="number" class="number-input" name="translation-rate" id="translation-rate" value="0.055"
                   step="0.001" min="0">
-                <label for="translation-rate">USD per word</label>
+                <label for="translation-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -87,7 +87,7 @@
               <div class="editing-box">
                 <input type="number" class="number-input" name="editing-rate" id="editing-rate" value="0.03" step="0.001"
                   min="0">
-                <label for="editing-rate">USD per word</label>
+                <label for="editing-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -96,7 +96,7 @@
               <div class="proofreading-box">
                 <input type="number" class="number-input" name="proofreading-rate" id="proofreading-rate" value="0.03"
                   step="0.001" min="0">
-                <label for="proofreading-rate">USD per word</label>
+                <label for="proofreading-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -105,7 +105,7 @@
               <div class="transcription-box">
                 <input type="number" class="number-input" name="transcription-rate" id="transcription-rate" value="0.1"
                   step="0.01" min="0">
-                <label for="transcription-rate">USD per minute</label>
+                <label for="transcription-rate">💲 per minute</label>
               </div>
             </div>
             <div>
@@ -114,7 +114,7 @@
               <div class="content-creation-box">
                 <input type="number" class="number-input" name="content-creation-rate" id="content-creation-rate"
                   value="0.055" step="0.001" min="0">
-                <label for="content-creation-rate">USD per word</label>
+                <label for="content-creation-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -123,7 +123,7 @@
               <div class="design-box">
                 <input type="number" class="number-input" name="design-rate" id="design-rate"
                   value="20" step="1" min="0">
-                <label for="design-rate">USD per hour</label>
+                <label for="design-rate">💲 per hour</label>
               </div>
             </div>
             <div>
@@ -132,7 +132,7 @@
               <div class="development-box">
                 <input type="number" class="number-input" name="development-rate" id="development-rate"
                   value="20" step="1" min="0">
-                <label for="development-rate">USD per hour</label>
+                <label for="development-rate">💲 per hour</label>
               </div>
             </div>
             <div>
@@ -141,7 +141,7 @@
               <div class="voiceover-box">
                 <input type="number" class="number-input" name="voiceover-rate" id="voiceover-rate" value="0.1"
                   step="0.01" min="0">
-                <label for="voiceover-rate">USD per word</label>
+                <label for="voiceover-rate">💲 per word</label>
               </div>
             </div>
             <div>
@@ -150,16 +150,16 @@
               <div class="meeting-box">
                 <input type="number" class="number-input" name="meeting-rate" id="meeting-rate" value="30" step="10"
                   min="0">
-                <label for="meeting-rate">USD per hour</label>
+                <label for="meeting-rate">💲 per hour</label>
               </div>
             </div>
           </fieldset>
         </form>
       </div>
-      <div class="estimate-results">
-        <fieldset class="totals">
-          <legend>Totals</legend>
-          <div id="totals">
+      <div class="estimate-calculations">
+        <fieldset class="calculations">
+          <legend>Calculations</legend>
+          <div id="calculations">
             <ul></ul>
           </div>
           <br>
@@ -167,6 +167,12 @@
             <label for="profit-margin"><em>profit margin:</em></label>
             <input type="number" class="number-input" name="profit-margin" id="profit-margin" value="30" step="1" min="0">
             <span>%</span>
+          </div>
+        </fieldset>
+        <fieldset class="totals">
+          <legend>Totals</legend>
+          <div id="totals">
+            <ul></ul>
           </div>
         </fieldset>
       </div>
