@@ -70,11 +70,11 @@ function updateTotals(e) {
     extractionBox.style.display = "block"
     let extractionFee = extractionRate.value * wordCount.value
     extractionFee = roundToX(extractionFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Extraction: ﹩${roundToX(((extractionRate.value*profitMargin)+parseFloat(extractionRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((extractionFee+extractionFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Extraction: ﹩${roundToX(((extractionRate.value*profitMargin)+parseFloat(extractionRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((extractionFee+extractionFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${extractionRate.value} ✕ ${wordCount.value} = ﹩${extractionFee}</li> 
                                             <li>Profit: ﹩${roundToX((extractionRate.value*profitMargin), 4)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*extractionFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += extractionFee
   } else {
     extractionBox.style.display = "none"
@@ -83,11 +83,11 @@ function updateTotals(e) {
     cleanupBox.style.display = "block"
     let cleanupFee = cleanupRate.value * wordCount.value
     cleanupFee = roundToX(cleanupFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Cleanup: ﹩${roundToX(((cleanupRate.value*profitMargin)+parseFloat(cleanupRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((cleanupFee+cleanupFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Cleanup: ﹩${roundToX(((cleanupRate.value*profitMargin)+parseFloat(cleanupRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((cleanupFee+cleanupFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${cleanupRate.value} ✕ ${wordCount.value} = ﹩${cleanupFee}</li> 
                                             <li>Profit: ﹩${roundToX((cleanupRate.value*profitMargin), 5)}﹩ ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*cleanupFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += cleanupFee
   } else {
     cleanupBox.style.display = "none"
@@ -96,11 +96,11 @@ function updateTotals(e) {
     translationBox.style.display = "block"
     let translationFee = translationRate.value * wordCount.value
     translationFee = roundToX(translationFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Translation: ﹩${roundToX(((translationRate.value*profitMargin)+parseFloat(translationRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((translationFee+translationFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Translation: ﹩${roundToX(((translationRate.value*profitMargin)+parseFloat(translationRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((translationFee+translationFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${translationRate.value} ✕ ${wordCount.value} = ﹩${translationFee}</li> 
                                             <li>Profit: ﹩${roundToX((translationRate.value*profitMargin), 5)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*translationFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += translationFee
   } else {
     translationBox.style.display = "none"
@@ -109,11 +109,11 @@ function updateTotals(e) {
     editingBox.style.display = "block"
     let editingFee = editingRate.value * wordCount.value
     editingFee = roundToX(editingFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Editing: ﹩${roundToX(((editingRate.value*profitMargin)+parseFloat(editingRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((editingFee+editingFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Editing: ﹩${roundToX(((editingRate.value*profitMargin)+parseFloat(editingRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((editingFee+editingFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${editingRate.value} ✕ ${wordCount.value} = ﹩${editingFee}</li> 
                                             <li>Profit: ﹩${roundToX((editingRate.value*profitMargin), 5)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*editingFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += editingFee
   } else {
     editingBox.style.display = "none"
@@ -122,11 +122,11 @@ function updateTotals(e) {
     proofreadingBox.style.display = "block"
     let proofreadingFee = proofreadingRate.value * wordCount.value
     proofreadingFee = roundToX(proofreadingFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Proofreading: ﹩${roundToX(((proofreadingRate.value*profitMargin)+parseFloat(proofreadingRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((proofreadingFee+proofreadingFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Proofreading: ﹩${roundToX(((proofreadingRate.value*profitMargin)+parseFloat(proofreadingRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((proofreadingFee+proofreadingFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${proofreadingRate.value} ✕ ${wordCount.value} = ﹩${proofreadingFee}</li> 
                                             <li>Profit: ﹩${roundToX((proofreadingRate.value*profitMargin), 5)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*proofreadingFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += proofreadingFee
   } else {
     proofreadingBox.style.display = "none"
@@ -135,11 +135,11 @@ function updateTotals(e) {
     transcriptionBox.style.display = "block"
     let transcriptionFee = transcriptionRate.value * recordingLength.value
     transcriptionFee = roundToX(transcriptionFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Transcription: ﹩${roundToX(((transcriptionRate.value*profitMargin)+parseFloat(transcriptionRate.value)), 4)} ✕  ${recordingLength.value} = ﹩${roundToX((transcriptionFee+transcriptionFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Transcription: ﹩${roundToX(((transcriptionRate.value*profitMargin)+parseFloat(transcriptionRate.value)), 4)} ✕  ${recordingLength.value} = ﹩${roundToX((transcriptionFee+transcriptionFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${transcriptionRate.value} ✕ ${recordingLength.value} = ﹩${transcriptionFee}</li> 
                                             <li>Profit: ﹩${roundToX((transcriptionRate.value*profitMargin), 5)} ✕ ${recordingLength.value} = ﹩${roundToX((profitMargin*transcriptionFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += transcriptionFee
   } else {
     transcriptionBox.style.display = "none"
@@ -148,11 +148,11 @@ function updateTotals(e) {
     contentCreationBox.style.display = "block"
     let contentCreationFee = contentCreationRate.value * wordCount.value
     contentCreationFee = roundToX(contentCreationFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Content creation: ﹩${roundToX(((contentCreationRate.value*profitMargin)+parseFloat(contentCreationRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((contentCreationFee+contentCreationFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Content creation: ﹩${roundToX(((contentCreationRate.value*profitMargin)+parseFloat(contentCreationRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((contentCreationFee+contentCreationFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${contentCreationRate.value} ✕ ${wordCount.value} = ﹩${contentCreationFee}</li> 
                                             <li>Profit: ﹩${roundToX((contentCreationRate.value*profitMargin), 5)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*contentCreationFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += contentCreationFee
   } else {
     contentCreationBox.style.display = "none"
@@ -161,11 +161,11 @@ function updateTotals(e) {
     designBox.style.display = "block"
     let designFee = designRate.value * designLength.value
     designFee = roundToX(designFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Design: ﹩${roundToX(((designRate.value*profitMargin)+parseFloat(designRate.value)), 4)} ✕  ${designLength.value} = ﹩${roundToX((designFee+designFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Design: ﹩${roundToX(((designRate.value*profitMargin)+parseFloat(designRate.value)), 4)} ✕  ${designLength.value} = ﹩${roundToX((designFee+designFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${designRate.value} ✕ ${designLength.value} = ﹩${designFee}</li> 
                                             <li>Profit: ﹩${roundToX((designRate.value*profitMargin), 5)} ✕ ${designLength.value} = ﹩${roundToX((profitMargin*designFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += designFee
   } else {
     designBox.style.display = "none"
@@ -174,11 +174,11 @@ function updateTotals(e) {
     developmentBox.style.display = "block"
     let developmentFee = developmentRate.value * developmentLength.value
     developmentFee = roundToX(developmentFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Development: ﹩${roundToX(((developmentRate.value*profitMargin)+parseFloat(developmentRate.value)), 4)} ✕  ${developmentLength.value} = ﹩${roundToX((developmentFee+developmentFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Development: ﹩${roundToX(((developmentRate.value*profitMargin)+parseFloat(developmentRate.value)), 4)} ✕  ${developmentLength.value} = ﹩${roundToX((developmentFee+developmentFee*profitMargin), 2)}</summary>
                               <ul>
                               <li>Cost: ﹩${developmentRate.value} ✕ ${developmentLength.value} = ﹩${developmentFee}</li> 
                               <li>Profit: ﹩${roundToX((developmentRate.value*profitMargin), 5)} ✕ ${developmentLength.value} = ﹩${roundToX((profitMargin*developmentFee), 2)}</li>
-                              </ul>`)
+                              </ul></details>`)
     sum += developmentFee
   } else {
     developmentBox.style.display = "none"
@@ -187,11 +187,11 @@ function updateTotals(e) {
     voiceoverBox.style.display = "block"
     let voiceoverFee = voiceoverRate.value * wordCount.value
     voiceoverFee = roundToX(voiceoverFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Voiceover: ﹩${roundToX(((voiceoverRate.value*profitMargin)+parseFloat(voiceoverRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((voiceoverFee+voiceoverFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Voiceover: ﹩${roundToX(((voiceoverRate.value*profitMargin)+parseFloat(voiceoverRate.value)), 4)} ✕  ${wordCount.value} = ﹩${roundToX((voiceoverFee+voiceoverFee*profitMargin), 2)}</summary>
                                             <ul>
                                             <li>Cost: ﹩${voiceoverRate.value} ✕ ${wordCount.value} = ﹩${voiceoverFee}</li> 
                                             <li>Profit: ﹩${roundToX((voiceoverRate.value*profitMargin), 4)} ✕ ${wordCount.value} = ﹩${roundToX((profitMargin*voiceoverFee), 2)}</li>
-                                            </ul>`)
+                                            </ul></details>`)
     sum += voiceoverFee
   } else {
     voiceoverBox.style.display = "none"
@@ -200,11 +200,11 @@ function updateTotals(e) {
     meetingBox.style.display = "block"
     let meetingFee = meetingRate.value * meetingLength.value
     meetingFee = roundToX(meetingFee, 2)
-    calculations.insertAdjacentHTML("beforeend", `<li>Meeting: ﹩${roundToX(((meetingRate.value*profitMargin)+parseFloat(meetingRate.value)), 4)} ✕  ${meetingLength.value} = ﹩${roundToX((meetingFee+meetingFee*profitMargin), 2)}</li>
+    calculations.insertAdjacentHTML("beforeend", `<details><summary>Meeting: ﹩${roundToX(((meetingRate.value*profitMargin)+parseFloat(meetingRate.value)), 4)} ✕  ${meetingLength.value} = ﹩${roundToX((meetingFee+meetingFee*profitMargin), 2)}</summary>
                               <ul>
                               <li>Cost: ﹩${meetingRate.value} ✕ ${meetingLength.value} = ﹩${meetingFee}</li> 
                               <li>Profit: ﹩${roundToX((meetingRate.value*profitMargin), 5)} ✕ ${meetingLength.value} = ﹩${roundToX((profitMargin*meetingFee), 2)}</li>
-                              </ul>`)
+                              </ul></details>`)
     sum += meetingFee
   } else {
     meetingBox.style.display = "none"
