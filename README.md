@@ -1,4 +1,3 @@
-~~~markdown
 # Esti.mate
 
 Esti.mate is a web application designed to help users estimate costs and profits associated with various tasks such as writing, recording, designing, and more. The application allows users to input various parameters related to their projects and provides an estimate based on the inputted data.
