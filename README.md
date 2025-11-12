@@ -31,8 +31,8 @@ You can try out the live demo of Esti.mate at: [https://esti-mate.pages.dev/](ht
 
 To run Esti.mate locally, clone the repository and open `index.html` in your web browser.
 
-```bash
-git clone <repository-url>
+```bashre
+git clone https://github.com/okturan/esti.mate
 cd esti-mate
 open index.html
 ```
