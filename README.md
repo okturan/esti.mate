@@ -1,6 +1,12 @@
 # Esti.mate
 
+[![CI](https://github.com/okturan/esti.mate/actions/workflows/ci.yml/badge.svg)](https://github.com/okturan/esti.mate/actions/workflows/ci.yml)
+
 Esti.mate is a web application designed to help users estimate costs and profits associated with various tasks such as writing, recording, designing, and more. The application allows users to input various parameters related to their projects and provides an estimate based on the inputted data.
+
+![Esti.mate calculating a mixed translation, transcription, design, development, and meeting estimate](docs/esti-mate-showcase.png)
+
+The example above combines 1,000 translated words, 20 minutes of transcription, five hours each of design and development, and a one-hour meeting. With a 30% profit margin, Esti.mate calculates a **$287.00 cost**, **$86.10 profit**, and **$373.10 customer estimate**.
 
 ## Features
 
@@ -19,6 +25,8 @@ You can try out the live demo of Esti.mate at: [https://esti-mate.pages.dev/](ht
 - CSS
 - JavaScript
 
+The interface has no runtime dependencies. Calculation rules live in `calculator.mjs`, independently from the DOM rendering layer, so mixed-unit totals and rounding behavior can be tested deterministically.
+
 ## How to Use
 
 1. Enter the desired values for word count, recording length, design hours, development hours, and meeting hours.
@@ -31,8 +39,28 @@ You can try out the live demo of Esti.mate at: [https://esti-mate.pages.dev/](ht
 
 To run Esti.mate locally, clone the repository and open `index.html` in your web browser.
 
-```bashre
-git clone https://github.com/okturan/esti.mate
+```bash
+git clone https://github.com/okturan/esti.mate.git
 cd esti-mate
 open index.html
 ```
+
+Because the application uses JavaScript modules, a local HTTP server is the most portable development path:
+
+```bash
+python3 -m http.server 4173
+```
+
+Then open <http://127.0.0.1:4173/>.
+
+## Testing
+
+The test suite covers mixed word/minute/hour calculations, currency rounding, invalid negative inputs, and zero-margin estimates.
+
+```bash
+npm ci
+npm run check
+npm test
+```
+
+GitHub Actions runs those checks on pull requests and every push to `master` using pinned, least-privilege actions.

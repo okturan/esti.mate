@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="script.js" type="module"></script>
   <title>Esti.mate</title>
 </head>
 
@@ -159,12 +159,12 @@
       <div class="estimate-calculations">
         <fieldset class="totals">
           <legend>Totals</legend>
-          <div id="totals">
+          <div id="totals" aria-live="polite">
           </div>
         </fieldset>
         <fieldset class="calculations">
           <legend>Calculations</legend>
-          <div id="calculations">
+          <div id="calculations" aria-live="polite">
           </div>
           <div>
             <p>⎯ ⎯ ⎯ ⎯ ⎯ </p>
