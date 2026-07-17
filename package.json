@@ -4,10 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check script.js && node --check calculator.mjs",
-    "test": "node --test"
+    "check": "node --check script.js && node --check calculator.mjs && node --check playwright.config.mjs && node --check tests/browser/accessibility.spec.mjs",
+    "test": "node --test",
+    "test:browser": "playwright test"
   },
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.61.1"
   }
 }

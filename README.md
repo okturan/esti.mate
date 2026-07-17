@@ -61,6 +61,10 @@ The test suite covers mixed word/minute/hour calculations, currency rounding, in
 npm ci
 npm run check
 npm test
+npx playwright install chromium
+npm run test:browser
 ```
 
-GitHub Actions runs those checks on pull requests and every push to `master` using pinned, least-privilege actions.
+The Chromium suite exercises a keyboard-only mixed-service estimate, verifies accessible names and conditional rate visibility, and scans the rendered page for automatically detectable WCAG A/AA violations. Automated checks do not replace manual assistive-technology testing.
+
+GitHub Actions runs the calculation and browser checks on pull requests and every push to `master` using pinned, least-privilege actions, then retains the Playwright report for seven days.
